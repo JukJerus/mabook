@@ -9,13 +9,47 @@ html{
   box-sizing: border-box;
 }
 
-#header-logo{
+body{
+  background-color: rgb(236, 236, 236); 
+}
+
+header nav{
+  background-color: #fffefe;
+  padding: 10px 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.041), 0 6px 20px 0 rgba(124, 124, 124, 0.19);
+}
+
+#headerLogo{
   font-weight: bold;
   font-size: 30px;
   margin-right: 20px;
 }
 
-#header-logo img{
+#headerLogo img{
   width: 40px;
   height: 40px;
 } 
+
+#addContainer{
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+#addContainer h2{
+  text-align: center;
+  font-weight: 700;
+}
+
+#notRead{
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+#notRead h2{
+  text-align: center;
+  font-weight: 700;
+}
+
+

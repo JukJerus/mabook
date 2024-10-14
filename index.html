@@ -25,9 +25,9 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#" id="header-logo">
+          <a class="navbar-brand" href="#" id="headerLogo">
             <img
               src="img/book-icon.svg"
               alt=""
@@ -60,14 +60,23 @@
                 <a class="nav-link" href="#">BelumBaca</a>
               </li> -->
             </ul>
-            <form class="d-flex mt-2" role="search">
+            <form class="d-flex mt-2" role="search" id="searchBook" data-testid="searchBookForm">
               <input
                 class="form-control me-2 focus-ring py-1 px-2 text-decoration-none border rounded-2"
-                type="search"
-                placeholder="Search"
+                type="text"
+                placeholder="Cari Buku..."
                 aria-label="Search"
+                data-testid="searchBookFormTitleInput"
+                id="searchBookTitle"
               />
-              <button class="btn btn-outline-secondary" type="submit">Search</button>
+              <button
+                class="btn btn-outline-secondary"
+                type="submit"
+                id="searchSubmit"
+                data-testid="searchBookFormSubmitButton"
+              >
+                Cari
+              </button>
             </form>
           </div>
         </div>
@@ -76,84 +85,109 @@
 
     <main>
       <section>
-        <div class="container-lg my-2 p-2 border">
+        <div class="container p-4 border-radius" id="addContainer">
           <h2>Tambah Buku Baru</h2>
           <form id="bookForm" data-testid="bookForm">
-            <div>
+            <div class="mb-3">
               <label for="bookFormTitle">Judul</label>
-              <input id="bookFormTitle" type="text" required data-testid="bookFormTitleInput" />
+              <input
+                class="form-control"
+                placeholder="Masukkan Judul Buku"
+                id="bookFormTitle"
+                type="text"
+                required
+                data-testid="bookFormTitleInput"
+              />
             </div>
-            <div>
+            <div class="mb-3">
               <label for="bookFormAuthor">Penulis</label>
-              <input id="bookFormAuthor" type="text" required data-testid="bookFormAuthorInput" />
+              <input
+                id="bookFormAuthor"
+                placeholder="Masukkan Nama Penulis Buku"
+                class="form-control"
+                type="text"
+                required
+                data-testid="bookFormAuthorInput"
+              />
             </div>
-            <div>
+            <div class="mb-2">
               <label for="bookFormYear">Tahun</label>
-              <input id="bookFormYear" type="number" required data-testid="bookFormYearInput" />
+              <input
+                id="bookFormYear"
+                class="form-control"
+                placeholder="Masukkan Tahun Terbit Buku"
+                type="number"
+                required
+                data-testid="bookFormYearInput"
+              />
             </div>
-            <div>
-              <label for="bookFormIsComplete">Selesai dibaca</label>
+            <div class="mb-3">
               <input
                 id="bookFormIsComplete"
                 type="checkbox"
                 data-testid="bookFormIsCompleteCheckbox"
               />
+              <label for="bookFormIsComplete">Selesai dibaca</label>
             </div>
-            <button id="bookFormSubmit" type="submit" data-testid="bookFormSubmitButton">
-              Masukkan Buku ke rak <span>Belum selesai dibaca</span>
-            </button>
-          </form>
-        </section>
-  
-        <section>
-          <h2>Cari Buku</h2>
-          <form id="searchBook" data-testid="searchBookForm">
-            <label for="searchBookTitle">Judul</label>
-            <input id="searchBookTitle" type="text" data-testid="searchBookFormTitleInput" />
-            <button id="searchSubmit" type="submit" data-testid="searchBookFormSubmitButton">
-              Cari
+            <button class="btn btn-secondary d-block mx-auto fw-medium" id="bookFormSubmit" type="submit" data-testid="bookFormSubmitButton">
+              Tambah Buku
             </button>
           </form>
         </div>
       </section>
 
-      <section class="container border p-2 my-2">
-        <h2>Belum selesai dibaca</h2>
+      <!-- <section>
+        <h2>Cari Buku</h2>
+        <form id="searchBook" data-testid="searchBookForm">
+          <label for="searchBookTitle">Judul</label>
+          <input id="searchBookTitle" type="text" data-testid="searchBookFormTitleInput" />
+          <button id="searchSubmit" type="submit" data-testid="searchBookFormSubmitButton">
+            Cari
+          </button>
+        </form>
+      </section> -->
 
-        <div id="incompleteBookList" data-testid="incompleteBookList">
-          <!-- 
+      <section>
+        <div class="container p-4 border-radius" id="notRead">
+          <h2>Belum selesai dibaca</h2>
+
+          <div id="incompleteBookList" data-testid="incompleteBookList">
+            <!-- 
             Ini adalah struktur HTML untuk masing-masing buku.
             Pastikan susunan elemen beserta atribut data-testid menyesuaikan seperti contoh ini.
           -->
-          <div data-bookid="123123123" data-testid="bookItem">
-            <h3 data-testid="bookItemTitle">Judul Buku 1</h3>
-            <p data-testid="bookItemAuthor">Penulis: Penulis Buku 1</p>
-            <p data-testid="bookItemYear">Tahun: 2030</p>
-            <div>
-              <button data-testid="bookItemIsCompleteButton">Selesai dibaca</button>
-              <button data-testid="bookItemDeleteButton">Hapus Buku</button>
-              <button data-testid="bookItemEditButton">Edit Buku</button>
+            <div data-bookid="123123123" data-testid="bookItem">
+              <h3 data-testid="bookItemTitle">Judul Buku 1</h3>
+              <p data-testid="bookItemAuthor">Penulis: Penulis Buku 1</p>
+              <p data-testid="bookItemYear">Tahun: 2030</p>
+              <div>
+                <button data-testid="bookItemIsCompleteButton">Selesai dibaca</button>
+                <button data-testid="bookItemDeleteButton">Hapus Buku</button>
+                <button data-testid="bookItemEditButton">Edit Buku</button>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       <section>
-        <h2>Selesai dibaca</h2>
+        <div class="container-lg my-2 p-2 border">
+          <h2>Selesai dibaca</h2>
 
-        <div id="completeBookList" data-testid="completeBookList">
-          <!-- 
+          <div id="completeBookList" data-testid="completeBookList">
+            <!-- 
             Ini adalah struktur HTML untuk masing-masing buku.
             Pastikan susunan elemen beserta atribut data-testid menyesuaikan seperti contoh ini.
           -->
-          <div data-bookid="456456456" data-testid="bookItem">
-            <h3 data-testid="bookItemTitle">Judul Buku 2</h3>
-            <p data-testid="bookItemAuthor">Penulis: Penulis Buku 2</p>
-            <p data-testid="bookItemYear">Tahun: 2030</p>
-            <div>
-              <button data-testid="bookItemIsCompleteButton">Selesai dibaca</button>
-              <button data-testid="bookItemDeleteButton">Hapus Buku</button>
-              <button data-testid="bookItemEditButton">Edit Buku</button>
+            <div data-bookid="456456456" data-testid="bookItem">
+              <h3 data-testid="bookItemTitle">Judul Buku 2</h3>
+              <p data-testid="bookItemAuthor">Penulis: Penulis Buku 2</p>
+              <p data-testid="bookItemYear">Tahun: 2030</p>
+              <div>
+                <button data-testid="bookItemIsCompleteButton">Selesai dibaca</button>
+                <button data-testid="bookItemDeleteButton">Hapus Buku</button>
+                <button data-testid="bookItemEditButton">Edit Buku</button>
+              </div>
             </div>
           </div>
         </div>

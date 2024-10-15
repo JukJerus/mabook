@@ -51,5 +51,15 @@ header nav{
   text-align: center;
   font-weight: 700;
 }
+#read{
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+#read h2{
+  text-align: center;
+  font-weight: 700;
+}
 
 

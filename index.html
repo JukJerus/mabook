@@ -129,7 +129,12 @@
               />
               <label for="bookFormIsComplete">Selesai dibaca</label>
             </div>
-            <button class="btn btn-secondary d-block mx-auto fw-medium" id="bookFormSubmit" type="submit" data-testid="bookFormSubmitButton">
+            <button
+              class="btn btn-secondary d-block mx-auto fw-medium"
+              id="bookFormSubmit"
+              type="submit"
+              data-testid="bookFormSubmitButton"
+            >
               Tambah Buku
             </button>
           </form>
@@ -148,14 +153,10 @@
       </section> -->
 
       <section>
-        <div class="container p-4 border-radius" id="notRead">
+        <div class="container px-2 py-4 border-radius" id="notRead">
           <h2>Belum selesai dibaca</h2>
 
-          <div id="incompleteBookList" data-testid="incompleteBookList">
-            <!-- 
-            Ini adalah struktur HTML untuk masing-masing buku.
-            Pastikan susunan elemen beserta atribut data-testid menyesuaikan seperti contoh ini.
-          -->
+          <!-- <div id="incompleteBookList" data-testid="incompleteBookList">
             <div data-bookid="123123123" data-testid="bookItem">
               <h3 data-testid="bookItemTitle">Judul Buku 1</h3>
               <p data-testid="bookItemAuthor">Penulis: Penulis Buku 1</p>
@@ -166,27 +167,65 @@
                 <button data-testid="bookItemEditButton">Edit Buku</button>
               </div>
             </div>
+          </div> -->
+
+          <div class="container d-flex flex-row flex-wrap justify-content-center ms-2 gap-2">
+            <div class="card" id="incompleteBookList" data-testid="incompleteBookList">
+              <div class="card-body" data-bookid="123123123" data-testid="bookItem">
+                <h5 class="card-title" data-testid="bookItemTitle">Marmut Merah Jembut</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary" data-testid="bookItemAuthor">
+                  Raditya Dika
+                </h6>
+                <p class="card-text" data-testid="bookItemYear">2030</p>
+                <button
+                  href="#"
+                  data-testid="bookItemIsCompleteButton"
+                  type="button"
+                  class="btn btn-success"
+                >
+                  Selesai
+                </button>
+                <button
+                  href="#"
+                  type="button"
+                  class="btn btn-danger"
+                  data-testid="bookItemDeleteButton"
+                >
+                  Hapus
+                </button>
+                <button
+                  href="#"
+                  type="button"
+                  class="btn btn-secondary"
+                  data-testid="bookItemEditButton"
+                >
+                  Edit
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <section>
-        <div class="container-lg my-2 p-2 border">
+        <div class="container px-2 py-4 border-radius" id="read">
           <h2>Selesai dibaca</h2>
 
-          <div id="completeBookList" data-testid="completeBookList">
-            <!-- 
-            Ini adalah struktur HTML untuk masing-masing buku.
-            Pastikan susunan elemen beserta atribut data-testid menyesuaikan seperti contoh ini.
-          -->
-            <div data-bookid="456456456" data-testid="bookItem">
-              <h3 data-testid="bookItemTitle">Judul Buku 2</h3>
-              <p data-testid="bookItemAuthor">Penulis: Penulis Buku 2</p>
-              <p data-testid="bookItemYear">Tahun: 2030</p>
-              <div>
-                <button data-testid="bookItemIsCompleteButton">Selesai dibaca</button>
-                <button data-testid="bookItemDeleteButton">Hapus Buku</button>
-                <button data-testid="bookItemEditButton">Edit Buku</button>
+          <div class="container d-flex flex-row flex-wrap justify-content-center ms-2 gap-2">
+            <div class="card" id="completeBookList" data-testid="completeBookList">
+              <!-- 
+              Ini adalah struktur HTML untuk masing-masing buku.
+              Pastikan susunan elemen beserta atribut data-testid menyesuaikan seperti contoh ini.
+            -->
+              <div class="card-body" data-bookid="456456456" data-testid="bookItem">
+                <h5 data-testid="bookItemTitle">Judul Buku 2</h5>
+                <h6 data-testid="bookItemAuthor">Penulis: Penulis Buku 2</h6>
+                <p data-testid="bookItemYear">Tahun: 2030</p>
+                <div>
+                  <button data-testid="bookItemIsCompleteButton">Selesai dibaca</button>
+                  <button data-testid="bookItemDeleteButton">Hapus Buku</button>
+                  <button data-testid="bookItemEditButton">Edit Buku</button>
+                </div>
               </div>
             </div>
           </div>

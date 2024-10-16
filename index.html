@@ -153,7 +153,7 @@
       </section> -->
 
       <section>
-        <div class="container px-2 py-4 border-radius" id="notRead">
+        <div class="container px-2 py-4" id="notRead">
           <h2>Belum selesai dibaca</h2>
 
           <!-- <div id="incompleteBookList" data-testid="incompleteBookList">
@@ -208,7 +208,7 @@
       </section>
 
       <section>
-        <div class="container px-2 py-4 border-radius" id="read">
+        <div class="container px-2 py-4" id="read">
           <h2>Selesai dibaca</h2>
 
           <div class="container d-flex flex-row flex-wrap justify-content-center ms-2 gap-2">
@@ -218,13 +218,21 @@
               Pastikan susunan elemen beserta atribut data-testid menyesuaikan seperti contoh ini.
             -->
               <div class="card-body" data-bookid="456456456" data-testid="bookItem">
-                <h5 data-testid="bookItemTitle">Judul Buku 2</h5>
-                <h6 data-testid="bookItemAuthor">Penulis: Penulis Buku 2</h6>
-                <p data-testid="bookItemYear">Tahun: 2030</p>
+                <h5 data-testid="bookItemTitle" class="card-title">Judul Buku 2</h5>
+                <h6 data-testid="bookItemAuthor" class="card-subtitle mb-2 text-body-secondary">
+                  Penulis Buku 2
+                </h6>
+                <p data-testid="bookItemYear" class="card-text">2030</p>
                 <div>
-                  <button data-testid="bookItemIsCompleteButton">Selesai dibaca</button>
-                  <button data-testid="bookItemDeleteButton">Hapus Buku</button>
-                  <button data-testid="bookItemEditButton">Edit Buku</button>
+                  <button
+                    data-testid="bookItemIsCompleteButton"
+                    type="button"
+                    class="btn btn-success"
+                  >
+                    Belum
+                  </button>
+                  <button data-testid="bookItemDeleteButton" type="button" class="btn btn-danger">Hapus</button>
+                  <button data-testid="bookItemEditButton" type="button" class="btn btn-secondary">Edit</button>
                 </div>
               </div>
             </div>

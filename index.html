@@ -26,7 +26,7 @@
   <body>
     <header>
       <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
+        <div class="container-fluid px-4">
           <a class="navbar-brand" href="#" id="headerLogo">
             <img
               src="img/book-icon.svg"
@@ -152,27 +152,27 @@
         </form>
       </section> -->
 
+      
+                <!-- <div id="incompleteBookList" data-testid="incompleteBookList">
+                  <div data-bookid="123123123" data-testid="bookItem">
+                    <h3 data-testid="bookItemTitle">Judul Buku 1</h3>
+                    <p data-testid="bookItemAuthor">Penulis: Penulis Buku 1</p>
+                    <p data-testid="bookItemYear">Tahun: 2030</p>
+                    <div>
+                      <button data-testid="bookItemIsCompleteButton">Selesai dibaca</button>
+                      <button data-testid="bookItemDeleteButton">Hapus Buku</button>
+                      <button data-testid="bookItemEditButton">Edit Buku</button>
+                    </div>
+                  </div>
+                </div> -->
       <section>
         <div class="container px-2 py-4" id="notRead">
           <h2>Belum selesai dibaca</h2>
 
-          <!-- <div id="incompleteBookList" data-testid="incompleteBookList">
-            <div data-bookid="123123123" data-testid="bookItem">
-              <h3 data-testid="bookItemTitle">Judul Buku 1</h3>
-              <p data-testid="bookItemAuthor">Penulis: Penulis Buku 1</p>
-              <p data-testid="bookItemYear">Tahun: 2030</p>
-              <div>
-                <button data-testid="bookItemIsCompleteButton">Selesai dibaca</button>
-                <button data-testid="bookItemDeleteButton">Hapus Buku</button>
-                <button data-testid="bookItemEditButton">Edit Buku</button>
-              </div>
-            </div>
-          </div> -->
-
           <div class="container d-flex flex-row flex-wrap justify-content-center ms-2 gap-2">
             <div class="card" id="incompleteBookList" data-testid="incompleteBookList">
               <div class="card-body" data-bookid="123123123" data-testid="bookItem">
-                <h5 class="card-title" data-testid="bookItemTitle">Marmut Merah Jembut</h5>
+                <h5 class="card-title" data-testid="bookItemTitle"></h5>
                 <h6 class="card-subtitle mb-2 text-body-secondary" data-testid="bookItemAuthor">
                   Raditya Dika
                 </h6>
@@ -213,10 +213,6 @@
 
           <div class="container d-flex flex-row flex-wrap justify-content-center ms-2 gap-2">
             <div class="card" id="completeBookList" data-testid="completeBookList">
-              <!-- 
-              Ini adalah struktur HTML untuk masing-masing buku.
-              Pastikan susunan elemen beserta atribut data-testid menyesuaikan seperti contoh ini.
-            -->
               <div class="card-body" data-bookid="456456456" data-testid="bookItem">
                 <h5 data-testid="bookItemTitle" class="card-title">Judul Buku 2</h5>
                 <h6 data-testid="bookItemAuthor" class="card-subtitle mb-2 text-body-secondary">
@@ -246,5 +242,7 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+
+    <script src="main.js"></script>
   </body>
 </html>
